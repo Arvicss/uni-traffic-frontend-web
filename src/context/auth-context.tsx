@@ -32,6 +32,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const getLoggedInUser = async () => {
     try {
+      console.log(api.defaults.baseURL)
       const response = await api.get("/user/me");
       if (response.status !== 200) {
         return;
